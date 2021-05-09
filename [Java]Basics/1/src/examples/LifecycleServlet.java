@@ -46,7 +46,7 @@ public class LifecycleServlet extends HttpServlet {
 		out.println("<html>");
 		out.println("<head><title>form</title></head>");
 		out.println("<body>");
-		out.println("<form method='post' action='/1/LifecycleServlet'>");
+		out.println("<form method='post' action='/firstweb/LifecycleServlet'>");
 		out.println("name : <input type='text' name='name'><br>");
 		out.println("<input type='submit' value='ok'><br>");                                                 
 		out.println("</form>");
