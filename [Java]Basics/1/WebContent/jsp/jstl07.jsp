@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <c:set var="t" value="<script type='text/javascript'>alert(1);</script>"/>
 <c:out value="${t }" escapeXml="true"/>
 </body>

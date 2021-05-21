@@ -10,5 +10,6 @@
 </head>
 <body>
 ${urlValue }
+redirect 된 곳 (jstl05) c:import url~
 </body>
 </html>
