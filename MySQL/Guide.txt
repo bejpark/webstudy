@@ -1,0 +1,34 @@
+* MySQL 명령어 *
+mysql.server start
+mysql.server stop
+mysql -uroot -p : 관리자 계정 접속
+mysql -h호스트명 -uDB계정명 -p DB이름 : 일반 접속
+
+brew services start mysql : 데몬으로 실행
+brew services stop mysql
+
+Select : 검색
+Insert : 등록
+Update : 수정
+Delete : 삭제
+
+create database DB이름;
+create user 'username'@'localhost'identified by 'password'; : 해당 컴퓨터만
+create user 'username'@'%'identified by 'password'; : 모든 클라이언트에서
+grant all privileges on connectdb.*to'username'@'localhost'; : 권한 주기, *는 모든 권한을 의미함
+grant all privileges on connectdb.*to'username'@'%';
+flush privileges; : DBMS에 적용
+
+select version(); : 현재 버전
+	current_date; now;
+show database; : 존재하는 데이터베이스 확인하기
+use mydb; : 사용하는 데이터베이스 전환
+
+show tables; : 접속한 db테이블 확인
+desc EMPLOYEE; : 테이블 구조 확인
+
+
+Select(distinct) 컬럼명(alias)
+From 테이블명; (select empno 직원사번,name 이름,job 직업 from employee order by name desc;)
+select concat(empno,'-',deptno) as '사번-부서번호' from employee;
+select empno 직원사번,name 이름,job 직업 from employee order by 1 desc;
