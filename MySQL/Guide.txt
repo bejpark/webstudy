@@ -67,3 +67,17 @@ Insert into role(role_id) values(201);
 Update role set description='CTO' where role_id = 200; : where조건에 맞는 값을 수정 (조건을 지정하지 않은 경우 전체가 수정됨)
 Delete from role where role_id=200;
 
+Create table 테이블명(
+	필드명 타입[NULL|NOT NULL][DEFAULT][AUTO_INCREMENT],
+	필드명 타입[~]
+	isbn varchar(10) primary key,
+	title varchar(20) not null
+	...
+);
+Alter table 테이블명
+	add 필드명 타입[~~];
+	drop 필드명;
+	change 필드명 새필드명 타입;
+	rename 변경테이블명;
+
+Drop table 테이블명; (제약조건 있을 시 삭제가 안될수도 있음) 삭제 순서가 있음.(foreign key)
