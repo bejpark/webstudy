@@ -138,4 +138,69 @@ public class RoleDao {
 		}
 		return role;
 	}
+	
+	
+	public int deleteRole(Integer roleId) {
+		int deleteCount = 0;
+		Connection conn = null;
+		PreparedStatement ps = null;
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dburl, dbUser, dbpasswd);
+			String sql = "DELETE FROM role WHERE role_id = ?";
+			ps = conn.prepareStatement(sql);
+			
+			ps.setInt(1, roleId);
+			deleteCount = ps.executeUpdate();
+			
+		}catch(Exception ex) {
+			ex.printStackTrace();
+		}finally {
+			if(ps != null) {
+				try {
+					ps.close();
+				}catch(Exception ex) {}
+			}
+			
+			if(conn != null) {
+				try {
+					conn.close();
+				}catch(Exception ex) {}
+			}
+		}
+		return deleteCount;
+	}
+	
+	
+	public int updateRole(Role role) {
+		int updateCount = 0;
+		
+		Connection conn = null;
+		PreparedStatement ps = null;
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection(dburl,dbUser,dbpasswd);
+			String sql = "update role set description = ? where role_id = ?";
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, role.getDescription());
+			ps.setInt(2, role.getRoleId());
+			updateCount = ps.executeUpdate();
+		}catch(Exception ex) {
+			ex.printStackTrace();
+		}finally {
+			if(ps!=null) {
+				try {
+					ps.close();
+				}catch(Exception ex) {}
+			}
+			if(conn!=null) {
+				try {
+					conn.close();
+				}catch(Exception ex) {}
+			}
+		}
+		return updateCount;
+	}
 }
