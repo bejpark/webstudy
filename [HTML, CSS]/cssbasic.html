@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style media="screen">
+        .html {
+            color: purple;
+        }
+        
+        .css {
+            text-decoration: underline;
+        }
+        
+        #selector {
+            font-size: 30px;
+        }
+        
+        .html.css
+        /*다중 클래스 */
+        
+        {
+            border: 1px solid;
+        }
+        
+        p[class] {
+            color: silver;
+        }
+        
+        p[class='foo'] {
+            /* 부분 속성 값 : 
+            ~= 공백으로 구분하여 x 가 포함하는지
+            ^= x로 시작하는지
+            $= x로 끝나는지
+            *= x가 포함되는지
+            */
+            color: red;
+        }
+        
+        p[class][id] {
+            /*속성*/
+            text-decoration: underline;
+        }
+        
+        p[class~='color'] {
+            color: blue;
+        }
+        
+        p[class*='color'] {
+            font-style: italic
+        }
+    </style>
+</head>
+
+<body>
+    <dl>
+        <dt class="html">HTML</dt>
+        <dd><span class="html">HTML</span>은 문서의 구조를 나타낸다.</dd>
+        <dt class="css">CSS</dt>
+        <dd><span class="css">CSS</span>는 문서의 표현을 나타낸다.</dd>
+        <dt class="html css">JS</dt>
+        <dd><span class="html css">JS</span>는 문서의 동작을 나타낸다. 클래스는 다중으로 적용이 가능하다.</dd>
+    </dl>
+    <p id="selector">id 선택자는 해쉬 기호를 사용한다. id는 class와 다르게 중복으로 사용이 안된다.(고유값)</p>
+
+    <p class="foo">hello</p>
+    <p class="far">CSS</p>
+    <p class="baz" id="title">HTML</p>
+
+    <p class="color">class color</p>
+    <p class="colorful">class colorful</p>
+    <p class="xx color">class xx color</p>
+</body>
+
+</html>
