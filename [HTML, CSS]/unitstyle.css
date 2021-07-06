@@ -1,0 +1,29 @@
+div {
+    font-size: 16px;
+}
+
+.px {
+    font-size: 16px;
+}
+
+.pt {
+    font-size: 12pt;
+}
+
+.percent {
+    font-size: 200%;
+}
+
+.em {
+    font-size: 2em;
+}
+
+#division {
+    background-image: url(https://w3schools.com/cssref/img_tree.gif);
+    background-color: #c1fbcf;
+    height: 1000px;
+    /*background-repeat: repeat-x;*/
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed;
+}

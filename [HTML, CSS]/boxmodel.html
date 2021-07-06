@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 50px;
+            /* 
+            auto : 브라우저에 의해 계산된 값으로 .. percent가능, padding과 같은 축약형 가능
+            margincollapse : top, bottom이 겹치는 것 반영, 더 큰값으로 적용됨 
+            음수도 가능
+            margin 과 padding에서의 %는 width기준이다. (상하좌우 상관없이 모두 width기준이다.)
+            일반 width, height는 각각의 %에 영향을 받는다.(부모요소)
+            */
+            padding: 30px;
+            /*상하좌우 지정 가능 padding-left 등으로 해도되지만 0 10px 20px 30px 방식으로 나열해도 적용됨 margin은 음수는 불가*/
+            border: 10px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    boxmodel 순서
+    <br>
+    <div>margin-border-padding-content</div>
+
+</body>
+
+</html>
