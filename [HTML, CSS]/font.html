@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-variant: small-caps;
+        }
+        
+        @font-face {
+            font-family: webNanumGothic;
+            src: url(NanumGothic.eot);
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        body {
+            font-family: webNanumGothic;
+        }
+        
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            text-align: center;
+            /*
+            margin: 0 auto;
+            */
+        }
+    </style>
+</head>
+
+<body>
+    <p> font variant small-caps .. </p>
+    <p> font 속성은 모든 글꼴 속성의 축약형임, font-size, font-family는 필수 요소이고 순서가 있지만 그렇게 많이쓰이진 않음</p>
+    <p> em, 숫자, %에 관한 line-height 개념 익히기.. %를 사용하면 부모 높이의 크기를 그대로 상속받고 숫자를 쓰면 자신의 글자에 계산되어 반영됨</p>
+    <p> 웹 폰트 설정.. font-family , @font-face 사용</p>
+    <p> Vertical align도 가능함 ..baselinem sub, super, px, em ...</p>
+    <p> text-align 은 좌우,양쪽정렬 가능, inline-level에 적용됨. block-level을 정렬할 순 없다.</p>
+    <p> text-indent는 들여쓰기임. em,px,% 등으로 표현, %는 부모의 width(컨테이더블록) 대비한 퍼센트</p>
+    <p> text-decoration .. underline, overlinem line-through 등 </p>
+
+    <p> 기타 속성으로는
+        <li>whilte-space (요소 안의 공백 처리)</li>
+        <li>letter-spacing (자간)</li>
+        <li>word-spacing (단어사이 간격)</li>
+        <li>word-break (단어가 라인 끝에올 때 처리 (중단점))</li>
+        <li>word-wrap (요소를 벗어난 단어의 줄바꿈)</li>
+        <div>box, </div>
+</body>
+
+</html>
