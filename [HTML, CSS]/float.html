@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 400px;
+            padding: 15px;
+            border: 1px dashed #aaa;
+        }
+        
+        .container div {
+            width: 100px;
+            height: 100px;
+            opacity: 0.5;
+        }
+        
+        .container div:nth-child(1) {
+            background-color: green;
+        }
+        
+        .container div:nth-child(2) {
+            background-color: skyblue;
+        }
+        
+        .container .box {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>요소를 보통의 흐름에서 벗어나 띄워지게함 </h2>
+    <div class="container">
+        <div style="float:left">Box1</div>
+        <div style="float:left">Box2</div>
+        <span class='' style="clear:both; display:block">clear은 float된 요소의 영향을 벗어나게 하기위함</span>
+    </div>
+
+    <h2>주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음 </h2>
+    <div class="container">
+        <div style="float:left">Box1</div>
+        <div style="float:right">Box2</div>
+        <p style="border:2px solid red; background:pink; clear:both"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem laborum harum molestias vitae commodi, omnis veniam, laboriosam inventore, repellendus voluptates expedita reiciendis? Culpa cupiditate aliquam harum. Nobis, ipsam suscipit? Ipsum?
+        </p>
+    </div>
+    <h2>대부분의 요소에 display값을 block으로 변경함, span은 보통 인라인으로 적용되지만 플롯이 있으면 block처럼 나옴 </h2>
+    <div class="container">
+        <div style="" class='box'>Box1</div>
+        <span style="float:left; background:skyblue" class='box'>Box2</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inline {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            margin: 10px;
+            padding: 10px;
+            border: 10px solid red;
+        }
+        
+        .block {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            margin: 10px;
+            padding: 10px;
+            border: 10px solid red;
+        }
+        
+        .inlineblock {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            margin: 10px;
+            padding: 10px;
+            border: 10px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    inline 은 width,height적용안되고 마진 패딩 보더는 좌,우만 적용
+    <br> block과 inlineblock은 모두 적용 된다.
+    <br> inlineblock은 배치는 inline 처럼 옆으로 배치됨, block은 개행되서 배치됨
+    <br><br>
+
+    <div>
+        <div style="display:none">box1</div>
+    </div>
+    <div>
+        <div style="display:inline" class="inline">box</div>
+    </div>
+    <div>
+        <div style="display:block" class="block">box</div>
+    </div>
+    <div>
+        <div style="display:inline-block" class="inlineblock">box</div>
+    </div>
+    <br> visibility hidden 은 해당 영억을 빈칸으로 채워줌, display none 은 아예 보여주지않는거라 빈공간도 없이 다른요소로 채워짐
+</body>
+
+</html>
