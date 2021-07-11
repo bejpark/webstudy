@@ -1,0 +1,49 @@
+/*
+1. 디스플레이 크기에 따른 배경색 변경
+0~767 : gold
+768~1024 : lightblue
+1025~ : lightpink
+
+2. 페이지 인쇄하는 경우의 스타일
+앵커의 Url
+앵커의 밑줄 제거
+*/
+
+@media screen and (max-width:767px) {
+    body {
+        background-color: gold;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+@media screen and (min-width:1025px) {
+    body {
+        background-color: lightpink;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+
+/* 
+보이는 화면은 차이가 없고 프린트했을때 차이가 있음
+*/
+
+@media print {
+    a {
+        text-decoration: none;
+    }
+    a::after {
+        display: inline;
+        content: "("attr(href)")";
+    }
+}
