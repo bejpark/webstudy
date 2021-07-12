@@ -1,0 +1,57 @@
+/*
+float의 해제 방법
+1. 부모요소의 height부여
+2. 부모요소의 float 속성
+3. overflow이용
+4. 인접 요소의 clear속성
+5. 가상요소를 이용한 clear속성을 이용한 해제 - 가장많이쓰임
+*/
+
+.box_wrap {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.box_parent {
+    border: 3px dotted blue;
+    padding: 10px;
+}
+
+.box {
+    color: #fff;
+    text-align: center;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-color: green;
+}
+
+.box2 {
+    width: 100px;
+    height: 200px;
+    float: right;
+    background-color: pink;
+}
+
+.box_parent::after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+
+/*  span 일때는 display:block사용해야함 */
+
+
+/*
+.clear {
+    
+   
+    
+    display: block;
+    clear: both;
+}
+*/
