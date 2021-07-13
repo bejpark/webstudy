@@ -1,0 +1,47 @@
+html,
+body,
+.wrap {
+    height: 100%;
+}
+
+.header {
+    height: 100px;
+    background-color: lightgreen;
+}
+
+.container {
+    table-layout: fixed;
+    display: table;
+    width: 800px;
+    min-height: 100%;
+    margin: -100px auto;
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+
+
+/* table cell 높이는 상속을 받아서 자동으로 바뀜*/
+
+.content {
+    display: table-cell;
+    width: 500px;
+    background-color: lightsalmon;
+    border-right: 5px solid #000;
+}
+
+.aside {
+    display: table-cell;
+    width: 300px;
+    background-color: lightseagreen;
+}
+
+.footer {
+    height: 100px;
+    background-color: lightblue;
+}
+
+.box {
+    width: 100px;
+    height: 200px;
+    background-color: red;
+}
