@@ -1,2 +1,2 @@
 # webstudy
-Web Study (boostcourse)
+Web Study (boostcourse) UI + FullStack
