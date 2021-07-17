@@ -1,0 +1,124 @@
+@charset "utf-8";
+body {
+    height: 5000px
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.popup_wrap {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.popup_inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.popup_layer {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    min-height: 150px;
+    padding-bottom: 50px;
+    background: #fff;
+    z-index: 10;
+}
+
+
+/*
+사이즈 고정인 경우 
+position: absolute, margin 마이너스 또는 auto
+
+사이즈 가변인 경우 
+display:inline-block, vertical middle, text-align center
+-> 이 경우 빈태그나 after사용해야됨 (가상요소)
+display table, table-cell
+-> 코드의 불필요한 중첩이 됨
+*/
+
+
+/*
+.popup_layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 300px;
+    height: 150px;
+    padding-bottom: 50px;
+    background: #fff;
+    z-index: 10;
+}
+*/
+
+
+/*
+.popup::after {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+    content: '';
+}
+
+.popup_layer {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 300px;
+    min-height: 150px;
+    padding-bottom: 50px;
+    background: #fff;
+    z-index: 10;
+}
+*/
+
+.popup_dimmed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.3;
+}
+
+.text_area {
+    padding: 50px 30px 30px;
+    text-align: center;
+}
+
+.btn_area {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    overflow: hidden;
+}
+
+.btn {
+    width: 50%;
+    height: 100%;
+    float: left;
+    border: 0;
+    background: pink;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn.no {
+    background: lightblue;
+}
