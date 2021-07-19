@@ -1,0 +1,193 @@
+    @charset "utf-8";
+    a {
+        text-decoration: none;
+    }
+    
+    .gnb_menu {
+        display: none;
+    }
+    
+    header {
+        overflow: hidden;
+        background-color: pink;
+        padding: 20px;
+    }
+    
+    .logo {
+        float: left;
+        font-size: 20px;
+        color: #fff;
+    }
+    
+    nav {
+        float: right;
+    }
+    
+    nav a {
+        padding: 0 5px;
+        font-size: 20px;
+        color: #fff;
+    }
+    
+    footer {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: #ccc;
+        font-size: 14px;
+        color: #000;
+    }
+    
+    section {
+        max-width: 900px;
+        margin: 50px auto;
+    }
+    
+    .list {
+        margin: -5px;
+        overflow: hidden;
+    }
+    
+    .list li {
+        float: left;
+        width: 20%;
+    }
+    
+    .inner {
+        display: block;
+        margin: 5px;
+        border: 1px solid #000;
+    }
+    
+    .thumb img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .title {
+        overflow: hidden;
+        padding: 5px 0;
+        white-space: nowrap;
+        text-align: center;
+        color: #555;
+        text-overflow: ellipsis;
+        font-size: 14px;
+    }
+    /* tablet */
+    
+    @media screen and (max-width:768px),
+    screen and (max-height:768px) and (orientation:landscape) {
+        header {
+            background-color: lightseagreen;
+        }
+        .logo {
+            width: 100px;
+            float: none;
+            display: block;
+            margin: 0 auto;
+            font-size: 40px;
+            text-align: center;
+        }
+        nav {
+            overflow-x: auto;
+            overflow-y: hidden;
+            margin-top: 20px;
+            float: none;
+            white-space: nowrap;
+        }
+        nav a {
+            font-size: 25px;
+        }
+        footer {
+            background-color: lightcoral;
+            color: #fff;
+        }
+        .list {
+            margin: -4[x];
+        }
+        .list li {
+            width: 25%;
+        }
+        .inner {
+            margin: 4px;
+            position: relative;
+        }
+        .title {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #fff;
+        }
+    }
+    /* mobile */
+    
+    @media screen and (max-width:375px),
+    screen and (max-height:375px) and (orientation:landscape) {
+        header {
+            padding: 10px 0;
+        }
+        nav {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            bottom: 0;
+            width: 200px;
+            background-color: lightslategray;
+            margin: 0;
+            z-index: 10;
+        }
+        nav a {
+            display: block;
+            padding: 20px 10px;
+            font-size: 20px;
+            border-bottom: 1px solid #fff;
+        }
+        .gnb_menu {
+            position: absolute;
+            display: block;
+            top: 12px;
+            left: 12px;
+            width: 40px;
+            height: 35px;
+            font-size: 1px;
+            color: transparent;
+            background: linear-gradient(#fff 50%, transparent 50%);
+            background-size: 100% 10px;
+        }
+        section {
+            margin: 0;
+        }
+        .list li {
+            width: 100%;
+        }
+        .inner {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+            margin: 0;
+            border: none;
+            border-bottom: 1px solid #000;
+        }
+        .thumb {
+            display: table-cell;
+            width: 100px;
+        }
+        .title {
+            display: table-cell;
+            position: relative;
+            right: auto;
+            left: auto;
+            bottom: auto;
+            vertical-align: middle;
+            background-color: #fff;
+            color: #000;
+            text-overflow: inherit;
+            white-space: inherit;
+            text-align: left;
+            padding: 8px;
+        }
+    }
