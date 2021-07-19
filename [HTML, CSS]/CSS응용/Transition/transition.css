@@ -1,0 +1,31 @@
+a {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    line-height: 100px;
+    text-align: center;
+    color: #fff;
+    background-color: blue;
+}
+
+a:hover {
+    height: 200px;
+    line-height: 200px;
+    color: #fff;
+    background-color: red;
+}
+
+.box1 {
+    transition-property: background-color, height, line-height;
+    transition-duration: .5s, 1s;
+    transition-timing-function: linear, ease, ease;
+    transition-delay: .5s, 0s, .5s;
+}
+
+.box2 {
+    /*
+    transition: background-color, .5s linear .5s, line-height .5s .5s;
+    */
+    transition: .5s;
+}

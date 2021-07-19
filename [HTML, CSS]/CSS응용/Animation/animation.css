@@ -1,0 +1,50 @@
+@keyframes ani_color {
+    0% {
+        background-color: blue;
+    }
+    100% {
+        background-color: red;
+    }
+}
+
+@keyframes ani_rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes ani_all {
+    0% {
+        background-color: blue;
+    }
+    50% {
+        background-color: red;
+        transform: rotate(0);
+    }
+    100% {
+        background-color: red;
+        transform: rotate(360deg);
+    }
+}
+
+div {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    line-height: 100px;
+    text-align: center;
+    color: #fff;
+    background-color: blue;
+}
+
+.box1 {
+    animation: ani_color 1s forwards, ani_rotate 1s 1s forwards;
+}
+
+.box2 {
+    animation: ani_all 2s forwards;
+}
